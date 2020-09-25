@@ -1,0 +1,21 @@
+db:
+  container_name:
+  environment:
+    MYSQL_DATABASE:
+    MYSQL_PASSWORD:
+    MYSQL_ROOT_PASSWORD:
+    MYSQL_USER:
+  image:
+  ports:
+  -3306:3306
+  volumes:
+  - /var/lib/mysql:/var/lib/mysql
+
+web:
+  container_name: php_apache
+  image: 
+  ports:
+  - 5003:80
+  volumes:
+  - /var/www/html:/var/www/html
+
